@@ -64,6 +64,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="APIHelper\PackageStatusHistoryHelper.cs" />
+    <Compile Include="UI\Windows\AddPackageToShippingWindow.xaml.cs">
+      <DependentUpon>AddPackageToShippingWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\PackageStatusHistoryWindow.xaml.cs">
+      <DependentUpon>PackageStatusHistoryWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\Windows\ShippingPackagesWindow.xaml.cs">
       <DependentUpon>ShippingPackagesWindow.xaml</DependentUpon>
     </Compile>
@@ -84,6 +91,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UI\UC\ShippingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Windows\AddPackageToShippingWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -125,6 +136,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UI\Windows\PackageStatusHistoryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\Windows\ShippingPackagesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -157,10 +172,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resources\logo.ico" />
     <Resource Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\update.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

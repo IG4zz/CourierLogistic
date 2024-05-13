@@ -32,17 +32,32 @@ namespace CourierLogistic.UI.Windows
 
         private void btnAddPackageToShipping_Click(object sender, RoutedEventArgs e)
         {
-
+            AddPackageToShippingWindow addPackageToShippingWindow = new AddPackageToShippingWindow(shippingId);
+            addPackageToShippingWindow.ShowDialog();
         }
 
         private void btnDeletePackageFromShipping_Click(object sender, RoutedEventArgs e)
         {
+            var data = DGridShippingPackages.SelectedItem as ShippingPackageGet;
 
+            if (data == null)
+            {
+                MessageBox.Show("Не выбрана посылка для удаления", "Внимание", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                return;
+            }              
+
+            ShippingPackagePost.DeleteShippingPackage(data.Id);
         }
 
-        private void DGridShippingPackages_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void btn_Back_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
+        }
 
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            shippingPackages = ShippingPackageGet.GetShippingPackagesByShipping(shippingId);
+            DGridShippingPackages.ItemsSource = shippingPackages;
         }
     }
 }

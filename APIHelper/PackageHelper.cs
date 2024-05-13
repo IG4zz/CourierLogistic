@@ -31,7 +31,6 @@ namespace CourierLogistic.APIHelper
                 }
             }
 
-
             public static List<PackageGet> GetPackages()
             {
                 client.Encoding = Encoding.UTF8;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourierLogistic.UI.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -87,6 +88,13 @@ namespace CourierLogistic.UI.Pages
         private void tBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
             SetItemSource(workplaceId);
+        }
+
+        private void uc_packagesList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            int packageId = (uc_packagesList.ViewPackages.SelectedItem as PackageGet).Id;
+            PackageStatusHistoryWindow packageStatusHistoryWindow = new PackageStatusHistoryWindow(packageId);
+            packageStatusHistoryWindow.ShowDialog();
         }
     }
 }

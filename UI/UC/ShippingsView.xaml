@@ -27,12 +27,13 @@
                             </Grid.RowDefinitions>
 
 
-                            <TextBlock Text="{Binding Id, StringFormat={}Номер заказа: {0}}"                         
+                            <TextBlock Text="{Binding Id, StringFormat={}Номер заказа: {0}}"
+                               Style="{StaticResource TextBlock}"
                                HorizontalAlignment="Left"                                 
                                Margin="5"                                  
                                FontSize="24"/>
 
-                            <TextBlock Text="{Binding DateTimeStart, StringFormat={}Дата создания: {0:dd/MM/yyyy HH:mm}}" 
+                            <TextBlock Text="{Binding DateTimeStart, StringFormat={}Дата создания: {0:dd.MM.yyyy HH:mm}}" 
                                HorizontalAlignment="Left"                                 
                                Margin="5,0,0,15" 
                                FontSize="18" 

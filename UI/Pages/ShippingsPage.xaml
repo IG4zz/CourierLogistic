@@ -6,8 +6,9 @@
       xmlns:local="clr-namespace:CourierLogistic.UI.Pages"
       xmlns:uc="clr-namespace:CourierLogistic.UI.UC"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="1320"
       Title="ShippingsPage">
+    
     <Grid>
 
         <Grid.RowDefinitions>
@@ -24,7 +25,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="500"/>
                 <ColumnDefinition Width="400"/>
-                <ColumnDefinition Width="500"/>
+                <ColumnDefinition Width="420"/>
             </Grid.ColumnDefinitions>
 
             <TextBlock x:Name="tBlock_PageName"
@@ -32,7 +33,20 @@
                 HorizontalAlignment="Center"
                 Grid.ColumnSpan="3"
                 Margin="5"                                  
-                FontSize="24"/>    
+                FontSize="24"/>
+
+            <Button Name="btnGetChanges" 
+                    Width="50" 
+                    Height="30" 
+                    Click="btnGetChanges_Click" 
+                    Style="{StaticResource buttonStyle}"
+                    HorizontalAlignment="Right"
+                    Grid.Column="2">
+                <StackPanel>
+                    <Image Source="\Resources\update.png" Width="50" Height="20"/>
+                </StackPanel>
+                
+            </Button>
 
             <StackPanel Orientation="Horizontal" Grid.Row="1">
 
@@ -97,7 +111,6 @@
         </Grid>
 
         <uc:ShippingsView x:Name="uc_ShippingsList" MouseDoubleClick="ShippingsInfo_MouseDoubleClick" Grid.Row="1"/>
-
 
         <Button x:Name="btnCreateShipping"
            Grid.Row="2"

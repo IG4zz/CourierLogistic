@@ -130,16 +130,19 @@ namespace CourierLogistic.APIHelper
 
             public static void DeleteShippingPackage(int Id)
             {
-                client.Encoding = Encoding.UTF8;
-                client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
-                try
+                if (MessageBox.Show("Вы действительно хотите удалить выбранную запись?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                 {
-                    client.UploadString(baseUrl + $"ShippingPackages/{Id}", "DELETE", "");
-                    MessageBox.Show("Данные удалены", "", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-                catch
-                {
-                    MessageBox.Show("Ошибка при удалении", "", MessageBoxButton.OK, MessageBoxImage.Error);
+                    client.Encoding = Encoding.UTF8;
+                    client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
+                    try
+                    {
+                        client.UploadString(baseUrl + $"ShippingPackages/{Id}", "DELETE", "");
+                        MessageBox.Show("Данные удалены", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ошибка при удалении", "Внимание", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
                 }
             }
 

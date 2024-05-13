@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CourierLogistic"
         mc:Ignorable="d"
-        Title="Ямщик-Логистика" Height="600" Width="1500">
+        Title="Ямщик-Логистика" Height="600" Width="1500" MinWidth="1500" MinHeight="600"
+        Icon="/Resources/logo.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="160"/>

@@ -34,14 +34,12 @@
                                Grid.Row="0"/>
 
                             <TextBlock Text="{Binding Sender, StringFormat={}Отправитель: {0}}"
-                               Style="{StaticResource TextBlock}"
                                HorizontalAlignment="Left"
                                Margin="5" 
                                FontSize="18" 
                                Grid.Row="1"/>
 
-                            <TextBlock Text="{Binding Recipient, StringFormat={}Получатель: {0}}"
-                               Style="{StaticResource TextBlock}"
+                            <TextBlock Text="{Binding Recipient, StringFormat={}Получатель: {0}}"                               
                                HorizontalAlignment="Left"                                 
                                Margin="5,0,0,15" 
                                FontSize="18" 

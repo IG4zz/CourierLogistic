@@ -60,6 +60,7 @@ namespace CourierLogistic.UI.Pages
             var data = uc_ShippingsList.ViewShippings.SelectedItem as ShippingGet;
             if (data == null)
                 return;
+
             ShippingPackagesWindow shippingPackagesWindow = new ShippingPackagesWindow(data.Id);
             shippingPackagesWindow.ShowDialog();
         }
@@ -93,6 +94,11 @@ namespace CourierLogistic.UI.Pages
         }
 
         private void CheckActual_Checked(object sender, RoutedEventArgs e)
+        {
+            SetItemSource(userId);
+        }
+
+        private void btnGetChanges_Click(object sender, RoutedEventArgs e)
         {
             SetItemSource(userId);
         }
