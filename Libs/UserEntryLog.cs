@@ -21,7 +21,7 @@ namespace CourierLogistic.Libs
 
             };
 
-            client.Encoding = Encoding.UTF8;
+           
             client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
             client.UploadString(baseUrl + "EntryHistories", JsonConvert.SerializeObject(userEntryLog));
 

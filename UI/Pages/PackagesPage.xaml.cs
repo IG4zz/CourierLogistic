@@ -38,6 +38,8 @@ namespace CourierLogistic.UI.Pages
 
         public void SetItemSource(int workplaceId)
         {
+            tBoxNoResult.Visibility = Visibility.Hidden;
+
             var listPackages = PackageGet.GetPackages();
 
             string searchText = tBoxSearch.Text;
@@ -67,6 +69,10 @@ namespace CourierLogistic.UI.Pages
                     .ToList();
 
             uc_packagesList.ViewPackages.ItemsSource = listPackages;
+
+                if (listPackages.Count == 0)
+                tBoxNoResult.Visibility = Visibility.Visible;
+
 
         }
 

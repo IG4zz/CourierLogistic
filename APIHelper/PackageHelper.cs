@@ -33,7 +33,7 @@ namespace CourierLogistic.APIHelper
 
             public static List<PackageGet> GetPackages()
             {
-                client.Encoding = Encoding.UTF8;
+               
 
                 try
                 {
@@ -52,7 +52,7 @@ namespace CourierLogistic.APIHelper
 
             public static List<PackageGet> GetPackage(int Id)
             {
-                client.Encoding = Encoding.UTF8;
+               
 
                 try
                 {
@@ -86,7 +86,7 @@ namespace CourierLogistic.APIHelper
 
             public static bool PostPackage(PackagePost package)
             {
-                client.Encoding = Encoding.UTF8;
+               
                 client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
                 client.UploadString(baseUrl + "packages", JsonConvert.SerializeObject(package));
 
@@ -105,7 +105,7 @@ namespace CourierLogistic.APIHelper
 
             public static bool PutPackage(PackagePost package)
             {
-                client.Encoding = Encoding.UTF8;
+               
                 client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
                 client.UploadString(baseUrl + $"packages/{package.Id}", "PUT", JsonConvert.SerializeObject(package));
 

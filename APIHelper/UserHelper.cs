@@ -21,7 +21,7 @@ namespace CourierLogistic.APIHelper
 
             public static List<UserGet> GetUsers()
             {
-                client.Encoding = Encoding.UTF8;
+               
 
                 try
                 {

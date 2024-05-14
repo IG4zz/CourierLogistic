@@ -30,6 +30,8 @@ namespace CourierLogistic.UI.Pages
 
         public void SetItemSource(int userId)
         {
+            tBoxNoResult.Visibility = Visibility.Hidden;
+
             var listShippings = ShippingGet.GetShippings(userId);
 
             string searchText = tBoxSearch.Text;
@@ -52,6 +54,9 @@ namespace CourierLogistic.UI.Pages
                     .ToList();
 
             uc_ShippingsList.ViewShippings.ItemsSource = listShippings;
+
+            if (listShippings.Count == 0)
+                tBoxNoResult.Visibility = Visibility.Visible;
 
         }      
 

@@ -30,7 +30,7 @@ namespace CourierLogistic.APIHelper
 
             public static List<ShippingGet> GetShippings(int userId)
             {
-                client.Encoding = Encoding.UTF8;
+               
 
                 try
                 {
@@ -50,7 +50,7 @@ namespace CourierLogistic.APIHelper
 
             public static List<ShippingGet> GetShipping(int Id)
             {
-                client.Encoding = Encoding.UTF8;
+               
 
                 try
                 {
@@ -81,7 +81,7 @@ namespace CourierLogistic.APIHelper
 
             public static bool PostShipping(ShippingPost shipping)
             {
-                client.Encoding = Encoding.UTF8;
+               
                 client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
                 client.UploadString(baseUrl + "Shippings", JsonConvert.SerializeObject(shipping));
 

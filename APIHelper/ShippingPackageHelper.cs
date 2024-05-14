@@ -36,7 +36,7 @@ namespace CourierLogistic.APIHelper
 
             public static List<ShippingPackageGet> GetShippingPackages()
             {
-                client.Encoding = Encoding.UTF8;
+               
 
                 try
                 {
@@ -55,7 +55,7 @@ namespace CourierLogistic.APIHelper
 
             public static List<ShippingPackageGet> GetShippingPackagesByShipping(int shippingId)
             {
-                client.Encoding = Encoding.UTF8;
+               
 
                 try
                 {
@@ -74,7 +74,7 @@ namespace CourierLogistic.APIHelper
 
             public static List<ShippingPackageGet> GetShippingPackageByShipping(int packageId)
             {
-                client.Encoding = Encoding.UTF8;
+               
 
                 try
                 {
@@ -103,7 +103,7 @@ namespace CourierLogistic.APIHelper
 
             public static bool PostShippingPackage(ShippingPackagePost shippingPackage)
             {
-                client.Encoding = Encoding.UTF8;
+               
                 client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
                 try
                 {
@@ -132,7 +132,7 @@ namespace CourierLogistic.APIHelper
             {
                 if (MessageBox.Show("Вы действительно хотите удалить выбранную запись?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                 {
-                    client.Encoding = Encoding.UTF8;
+                   
                     client.Headers.Add(HttpRequestHeader.ContentType, "application/json");
                     try
                     {

@@ -23,7 +23,7 @@ namespace CourierLogistic.APIHelper
 
             public static List<PackageStatusHistoryGet> GetPackageHistoryById(int packageId)
             {
-                client.Encoding = Encoding.UTF8;
+               
 
                 try
                 {

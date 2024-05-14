@@ -97,5 +97,15 @@
 
         <uc:PackagesView x:Name="uc_packagesList" Grid.Row="1" MouseDoubleClick="uc_packagesList_MouseDoubleClick"/>
 
+        <TextBlock x:Name="tBoxNoResult"
+               Text="Поиск не вернул результата"  
+               Style="{StaticResource TextBlock}"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Margin="5"                                  
+               FontSize="24" 
+               Grid.Row="1"
+               Visibility="Hidden"/>
+
     </Grid>
 </Page>

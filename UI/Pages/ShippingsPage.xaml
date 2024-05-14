@@ -111,6 +111,16 @@
         </Grid>
 
         <uc:ShippingsView x:Name="uc_ShippingsList" MouseDoubleClick="ShippingsInfo_MouseDoubleClick" Grid.Row="1"/>
+        
+        <TextBlock x:Name="tBoxNoResult"
+       Text="Поиск не вернул результата"  
+       Style="{StaticResource TextBlock}"
+       HorizontalAlignment="Center"
+       VerticalAlignment="Center"
+       Margin="5"                                  
+       FontSize="24" 
+       Grid.Row="1"
+       Visibility="Hidden"/>
 
         <Button x:Name="btnCreateShipping"
            Grid.Row="2"
